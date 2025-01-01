@@ -22,9 +22,7 @@ def scrape_user_tweets(username, num_tweets=5, mock=True):
     tweet_list = []
 
     if mock:
-        EDEN_TWITTER_GIST = (
-            "https://gist.githubusercontent.com/NhanNguyen001/bbedf88686d750df0fb6fd6f475ecd37/raw/f495e028dc9ca9afc9832c2470003ceff62bbc3f/eden-marco-tweets.json"
-        )
+        EDEN_TWITTER_GIST = "https://gist.githubusercontent.com/NhanNguyen001/bbedf88686d750df0fb6fd6f475ecd37/raw/f495e028dc9ca9afc9832c2470003ceff62bbc3f/eden-marco-tweets.json"
         tweets = requests.get(EDEN_TWITTER_GIST, timeout=5).json()
     else:
         user_id = twitter_client.get_user(username=username).data.id
