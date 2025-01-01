@@ -13,7 +13,7 @@ from third_parties.twitter import scrape_user_tweets
 def ice_break_with(name: str) -> Tuple[Summary, str]:
     linkedin_username = linkedin_lookup_agent(name=name)
     linkedin_data = scrape_linkedin_profile(
-        linkedin_profile_url=linkedin_username, mock=True
+        linkedin_profile_url=linkedin_username, mock=False
     )
 
     twitter_username = twitter_lookup_agent(name=name)
